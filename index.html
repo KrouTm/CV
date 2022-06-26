@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <title>CV</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap');
+        </style>
+    </head>
+    <body>
+        <!--Name-->
+        <h6 class="name">Caroline Tiemi Ychihara Iamassaki</h6>
+        <div class="about-me">
+            <div class="about-me-text">
+                <!--Title-->
+                <h5>UX Developer</h5>
+                <!--Age Profession Level-->
+                <div class="description">
+                    <h1>22 years<p class="dob">05/12/1999</p></h1>
+                    <i class="las la-circle"></i>
+                    <h1>Full Stack Development<p class="profession">E-commerce Applications</p></h1>
+                    <i class="las la-circle"></i>
+                    <h1>Junior</h1>
+                </div>
+                <div class="details">
+                    <!--Summary-->
+                    <p>Looking for an opportunity to enter the programming industry, as an intern or Junior Level, I intend to dedicate myself and grow in this environment.<br>I value professionalism at work, the duty must be fulfilled and if I don't have the necessary knowledge, I will go out of my way to solve it.</p>
+                    <!--Language-->
+                    <i class="las la-language"></i>
+                    <p>Native Portuguese</p>
+                    <p>Upper-intermediate English</p>
+                    <!--Github Projects-->
+                    <i class="lab la-github"></i>
+                    <a href="https://github.com/KrouTm/CoffeeShop">Coffee Shop</a>
+                    <a href="https://github.com/KrouTm/BattleShipX">Battleship</a>
+                    <a href="https://github.com/KrouTm/RockPaperScissorsLizardSpock">Rock, Paper, Scissors, Lizard and Spock</a>
+                </div>
+                <!--Line-->
+                <hr>
+            </div>
+
+            <!--Self-->
+            <div id="background-self">
+                <div class="contact">
+                    <!--Email & Phone-->
+                    <button id="btn"><i class="lar la-envelope"></i></button>
+                    <button><i class="las la-phone"></i></button>
+                </div>
+            </div>
+            <!--Send E-mail-->
+            <div id="mail">
+                <h6>My E-mail</h6>
+                <p>Feel free to send me an email and offer me an opportunity.</p>
+                <form action="/submit" method="POST">
+                        <input class="mail-details" name="name" placeholder="Name:" type="text"/><!--Name-->
+                        <input class="mail-details" name="lastname" placeholder="Last name:" type="text"/><!--Last name-->
+                        <input class="mail-details" name="email" placeholder="E-mail:" type="email"/><!--E-mail-->
+                        <input class="mail-details" name="phone" placeholder="Phone:" type="tel"/><!--Phone-->
+                        <textarea class="mail-details" name="comments" cols="50" rows="8" placeholder="Comments (optional):"></textarea><!--Comment-->
+                        <input class="submit" type="submit" value="Submit"/><!--Submit-->
+                </form>
+                <!--Back to Self-->
+                <button id="btn0"><i class="las la-arrow-left"></i></button>
+            </div>
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+</html>

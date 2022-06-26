@@ -1,0 +1,89 @@
+body{background-color: rgb(4, 0, 19);}
+*{text-decoration: none; list-style: none; box-sizing: border-box; margin: 0; padding: 0; border: none; font-size: xx-large; color: whitesmoke; font-family: 'Montserrat', sans-serif;}
+
+/*Name*/
+.name{writing-mode: vertical-rl; transform: rotate(180deg); position: absolute; font-family: 'Bungee Hairline'; font-size: 1.3rem; top: 1rem;}
+
+/*Self*/
+.about-me{display: grid; grid-template-columns: repeat(2,0fr); justify-content: center; padding: 2rem;}
+.about-me-text{width: 15rem; margin: 0 2rem; position: relative; align-items: flex-end; bottom: 0; height: 100%;}
+/*Title*/
+.about-me-text h5{font-family: 'Josefin Slab', serif; font-size: 3rem; font-weight: lighter; line-height: 2.5rem; padding-bottom: 1.5rem;}
+
+/*Age Profession Level*/
+.description{display: grid; grid-template-columns: repeat(5,1fr); padding-bottom: 1rem;}
+.description h1{font-family: 'Julius Sans One', sans-serif; font-size: 0.5rem; color: lightskyblue; text-align: center; margin: 0 auto; width: max-content;}
+.description h1 > p{font-size: 0.4rem; position: relative; opacity: 0; right: 0; left: 0; transform: translateY(-50%); transition: all .5s;}
+.description h1:hover .dob{opacity: 1; transform: translateY(30%);}
+.description h1:hover .profession{opacity: 1; transform: translateY(30%);}
+.description i{font-size: 0.4rem; text-align: center; color:palegoldenrod;}
+
+/*Summary*/
+.details{position: relative; left: 4rem; width: 10rem; display: grid; grid-template-columns: repeat(1,1fr); line-height: 0.8rem;}
+.details p{font-size: 0.5rem;}
+
+/*Language*/
+.details i{padding-top: 1rem; padding-bottom: 0.4rem; font-size: 1rem; color: lightskyblue;}
+
+/*Github Projects*/
+.details a{font-size: 0.5rem; transition: all .5s; }
+.details a:hover{opacity: 0.7;}
+
+/*Line*/
+.about-me hr{display: block; width: 100%; overflow: hidden; transform: rotate(90deg); position: relative; right: 50%; color: palegoldenrod; bottom: 7.5rem; border-style: solid; border-width: 1px;}
+
+/*Self*/
+#background-self{background-image: url(https://images.unsplash.com/photo-1536590158209-e9d615d525e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80); background-position: center; background-size: cover; background-repeat: no-repeat; width: 25rem; height: 25rem; border-radius: 50% 0 ; box-shadow: 0 0 5rem rgba(135, 206, 250, 0.5); display: block;}
+
+/*Email & Phone*/
+.contact{position: relative; display: flex; justify-content: left; height: 100%; align-items: flex-end; padding: 1rem;}
+.contact i{font-size: 1.5rem; letter-spacing: 1rem; text-align: center; opacity: 0.7; transition: all .5s; cursor: pointer;}
+.contact i:hover{opacity: 1; text-shadow: 0 0 0.2rem rgba(245, 245, 245, 0.5);}
+.contact button{background-color: transparent;}
+
+/*Send E-mail*/
+#mail{display: none; border: 1px solid; width: 25rem; height: 100%; padding: 1.5rem; text-align: center;}
+#mail h6{font-family: 'Julius Sans One', sans-serif; font-size: 1.5rem; font-weight: lighter; color: lightblue;}
+#mail p{font-size: 0.7rem; color: palegoldenrod;}
+form{padding: 1rem;}
+.mail-details{font-size: 0.5rem; text-transform: capitalize; display: inline-block; width: 100%; padding: 0 0.3rem; line-height: 1rem; background-color: rgba(245, 245, 245, 0.2);}
+textarea{margin: 0.5rem auto;}
+.submit{color: palegoldenrod; background-color: transparent; border: 1px solid; padding: 0.5rem; cursor: pointer; width: 5rem; transition: all .5s;}
+.submit:hover{opacity: 0.7;}
+
+/*Back to Self*/
+#mail i{font-size: 2rem; opacity: 0.7; text-align: left;}
+#mail button{background-color: transparent;  display: flex; transition: all .5s; cursor: pointer;}
+#mail button:hover{opacity: 1; transform: translateX(-0.5rem);}
+
+
+
+
+
+
+
+
+
+
+/*320px — 480px: Mobile devices*/
+@media (min-width:320px) and (max-width:480px){
+  *{font-size: small;}
+}
+
+/*481px — 768px: iPads, Tablets*/
+@media (min-width:481px) and (max-width:768px){
+  *{font-size: medium;}
+}
+
+/*769px — 1024px: Small screens, laptops*/
+@media (min-width:769px) and (max-width:1024px){
+  *{font-size: large;}
+}
+
+@media (min-width:1025px) and (max-width:1200px){
+  *{font-size: large;}
+}
+
+@media (min-width:1201px) and (max-width:1500px){
+  *{font-size: x-large;}
+}
