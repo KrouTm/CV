@@ -1,26 +1,54 @@
 var btn = document.querySelector("#btn");
 var btn0 = document.querySelector("#btn0");
-var a = document.querySelector("#background-self");
-var b = document.querySelector("#mail");
+var btn1 = document.querySelector("#btn1");
+var self = document.querySelector("#background-self");
+var mail = document.querySelector("#mail");
+var about = document.querySelector("#about-me-text");
 
 btn.addEventListener("click", function() {
-  if(a.style.display === "none") {
-        a.style.display = "block";
-        b.style.display = "none";
+  if(self.style.display === "none") {
+        self.style.display = "block";
+        mail.style.display = "none";
 
     } else {
-        a.style.display = "none";
-        b.style.display = "block";
+        self.style.display = "none";
+        mail.style.display = "block";
   }
 });
 
 btn0.addEventListener("click", function() {
-  if(b.style.display === "block") {
-        b.style.display = "none";
-        a.style.display = "block";
+  if(mail.style.display === "block") {
+        mail.style.display = "none";
+        self.style.display = "block";
 
     } else {
-        b.style.display = "none";
-        a.style.display = "block";
+        mail.style.display = "none";
+        self.style.display = "block";
   }
+});
+
+btn1.addEventListener("click", function() {
+    if(window.innerWidth < 768){
+        if(about.style.display === "none") {
+            mail.style.display = "block";
+        } else {
+            mail.style.display = "block";
+            about.style.display = "none";
+        }
+        
+    }
+});
+
+btn0.addEventListener("click", function() {
+    if(window.innerWidth < 768){
+        if(mail.style.display === "block") {
+            mail.style.display = "none";
+            about.style.display = "block";
+    
+        } else {
+            mail.style.display = "none";
+            about.style.display = "block";
+        }
+        
+    }
 });
