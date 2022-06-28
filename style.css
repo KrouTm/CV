@@ -117,3 +117,10 @@ textarea{margin: 0.5rem auto;}
 @media (min-width:1501px) and (max-width:1700px){
   *{font-size: x-large;}
 }
+
+@media only screen and (-moz-min-device-pixel-ratio: 2), 
+       only screen and (-o-min-device-pixel-ratio: 2/1), 
+       only screen and (-webkit-min-device-pixel-ratio: 2), 
+       only screen and (min-device-pixel-ratio: 2) {
+ /*use CSS to swap out your low res images with high res ones here*/
+}   
