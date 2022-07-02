@@ -1,77 +1,96 @@
-body{background-color: rgb(4, 0, 19); padding: 2rem 4rem;}
-*{text-decoration: none; list-style: none; box-sizing: border-box; margin: 0; padding: 0; border: none; font-size: xx-large; color: whitesmoke; font-weight: 100; font-family: 'Montserrat', sans-serif;}
+body{background-image: url(https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80); background-position: center; background-size: cover; background-repeat: no-repeat; height: 100%; width: 100%;}
+*{text-decoration: none; list-style: none; box-sizing: border-box; margin: 0; padding: 0; border: none; font-size: xx-large; color: darkslategrey; font-family: 'Montserrat', sans-serif;}
 
 
-nav{position: absolute; right: 0; margin: 0 2rem; z-index: 1000;}
-nav a{transition: all .8s; margin-right: -2rem; visibility: collapse; opacity: 0; cursor: pointer;}
-nav i{font-size: 1.5rem; color: lightblue;}
-nav:hover a{margin-right: 2.5rem; visibility: visible; opacity: 1;}
-
-/*Self*/
-.about-me{display: grid; grid-template-columns: repeat(2,1fr); width: 100%; justify-content: center;}
-#about-me-text{display: block; position: relative; width: 70%;}
+nav{display: flex; right: 2rem;background-color: rgba(240, 230, 140, 0.7); position: fixed; z-index: 1000; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;}
+.back-name{width: 15rem; height: 100%; position: relative; padding: 0.5rem; text-align: center;}
+nav h6{font-family: 'Barlow Condensed', sans-serif; font-weight: lighter;}
+nav p{font-size: 0.5rem; padding: 1rem;}
+.navbar-show i{font-size: larger; padding: 0 1rem; margin: auto; transition: all .5s;}
+.navbar-show i:hover{opacity: 0.7;}
+.navbar-show{overflow: hidden; transition: all .8s ease-in-out; height: 0;}
+.back-name:hover .navbar-show{height: 5rem;}
 
 /*Title*/
-.title{font-family: 'Josefin Slab', serif; font-size: 3rem; font-weight: lighter; text-align: left; line-height: 2.5rem; padding-bottom: 1.5rem;}
-
-/*Age Profession Level*/
-.description{display: grid; grid-template-columns: repeat(5,1fr); position: relative; z-index: 100;}
-.description h1{font-family: 'Julius Sans One', sans-serif; font-size: 0.5rem; color: lightskyblue; text-align: center; margin: 0 auto; width: max-content;}
-.description h1 > p{font-size: 0.4rem; position: relative; opacity: 0; right: 0; left: 0; transform: translateY(-50%); transition: all .5s;}
-.description h1:hover .dob{opacity: 1; transform: translateY(30%);}
-.description h1:hover .profession{opacity: 1; transform: translateY(30%);}
-.description i{font-size: 0.4rem; text-align: center; color:palegoldenrod;}
-
-/*Summary*/
-.details{position: relative; left: 2rem; padding: 1rem 0; width: 100%; display: grid; grid-template-columns: repeat(1,1fr); line-height: 0.8rem;}
-.details p{font-size: 0.5rem;}
-
-/*Language*/
-.details i{padding-top: 0.7rem; padding-bottom: 0.3rem; font-size: 1rem; color: lightskyblue; display: grid; grid-template-columns: repeat(2,0fr);}
-.details i > h1{font-size: 0.7rem; color: lightskyblue; line-height: 1.2rem; padding-left: 0.2rem; font-family: 'Julius Sans One', sans-serif;}
-
-/*Github Projects*/
-.details a{font-size: 0.5rem; transition: all .5s;}
-.details a:hover{opacity: 0.7;}
-
-/*Line*/
-.about-me hr{width: 15rem; overflow: hidden; transform: rotate(90deg); position: relative; color: palegoldenrod; bottom: 10rem; border-style: solid; border-width: 1px;}
-.hr1{display: block; left: -8rem;}
-.hr2{display: none;}
+.title{font-family: 'Josefin Slab', serif; font-size: 4rem; font-weight: lighter; text-align: left; line-height: 3rem;}
 
 /*Self*/
-#background-self{position: relative; height: 100%; margin: auto; left: 0; right: 0; justify-content: center; width: 100%;}
-.back-self{background-image: url(self.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; height: 100%; border-radius: 0 50%; box-shadow: 0 0 5rem rgba(135, 206, 250, 0.5);}
-#background-self0{display: none;}
-.contact0{display: none;}
+.about-me{width: 100%; justify-content: center; padding: 2rem 4rem; height: 100vh;}
+#about-me-text{display: block; position: relative; width: 20rem; top: 50%; transform: translateY(-70%);}
+
+/*Age Profession Level*/
+.description{display: grid; grid-template-columns: repeat(5,1fr); position: relative; z-index: 100; margin-top: 1rem;}
+.description h1{font-family: 'Julius Sans One', sans-serif; font-size: 0.5rem; color: midnightblue; text-align: center; margin: 0 auto; width: max-content;}
+.description h1 > p{font-size: 0.4rem; position: relative; opacity: 0; right: 0; left: 0; transform: translateY(-80%); transition: all .5s;}
+.description h1:hover .dob{opacity: 1; transform: translateY(-30%);}
+.description h1:hover .profession{opacity: 1; transform: translateY(-30%);}
+.description i{font-size: 0.4rem; text-align: center; color: midnightblue;}
+
+/*Summary*/
+.about-me p{font-size: 0.5rem; margin-top: 0.5rem; line-height: 0.9rem;}
+
+/*Self Details*/
+.about-me0{display: grid; grid-template-columns: repeat(2,1fr); width: 100%; justify-content: center;}
+.about-me0 p{font-size: 0.5rem;}
+#background-self{position: relative; height: 100%; width: 100%;}
+.back-self{background-image: url(self.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; width: 80%; height: 20rem; box-shadow: 0 0 5rem rgba(25, 25, 112, 0.3); position: relative; border: 1px solid khaki; margin: auto;}
+
 
 /*Email & Phone*/
-.contact{position: relative; display: flex; justify-content: right; height: 100%; align-items: flex-end; padding: 1rem;}
-.contact i{font-size: 1.5rem; letter-spacing: 1rem; text-align: center; opacity: 0.7; transition: all .5s; cursor: pointer; color: rgb(4, 0, 19);}
-.contact i:hover{opacity: 1; text-shadow: 0 0 0.2rem rgba(4, 0, 19, 0.5);}
+.contact{position: relative; display: flex; justify-content: right; height: 100%; align-items: flex-end; padding-bottom: 1rem; padding-right: 0.5rem;}
+.contact i{font-size: 2rem; letter-spacing: 1rem; text-align: center; transition: .5s; cursor: pointer; color: khaki; text-shadow: 0 0 0.5rem rgba(25, 25, 112, 0.2);}
+.contact i:hover{-webkit-animation: ring 1.2s infinite ease-in-out;}
 button{background-color: transparent;}
-.contact0 button{display: none;}
+
+@-webkit-keyframes ring {
+  0% {transform: rotate(0) scale(1) skew(1deg)}
+  10% {transform: rotate(-25deg) scale(1) skew(1deg)}
+  20% {transform: rotate(25deg) scale(1) skew(1deg)}
+  30% {transform: rotate(-25deg) scale(1) skew(1deg)}
+  40% {transform: rotate(25deg) scale(1) skew(1deg)}
+  50% {transform: rotate(0) scale(1) skew(1deg)}
+  100% {transform: rotate(0) scale(1) skew(1deg)}
+}
+
+
+
+/*Details*/
+.folder{margin-left: 2rem; margin-bottom: 5rem;}
+.folder h5{font-size: 3rem; font-weight: lighter; font-family: 'Josefin Slab', serif; padding-bottom: 1rem;}
+.details{line-height: 1rem; padding-left: 1rem;}
+.details i{color: midnightblue; display: flex; padding-top: 0.5rem;}
+.details i > h1{font-size: 0.5rem; color: midnightblue; line-height: 1.2rem; padding-left: 0.2rem; font-family: 'Julius Sans One', sans-serif;}
+.details a{font-size: 0.5rem; transition: all .5s; display: grid;}
+.details a:hover{opacity: 0.7;}
+/*Line*/
+hr{width: 60%; overflow: hidden; margin: auto; transform: rotate(90deg); position: relative; color: khaki; border-style: solid; border-width: 1px;}
+hr{display: block; left: -55%; bottom: 10rem;}
+
+
+
 
 /*Send E-mail*/
-#mail{display: none; border: 1px solid; width: 100%; height: fit-content; padding: 1.5rem; text-align: center; align-items: flex-start; margin-top: -6rem; position: relative;}
-#mail h6{font-family: 'Julius Sans One', sans-serif; font-size: 1.5rem; font-weight: lighter; color: lightblue;}
-#mail p{font-size: 0.7rem; color: palegoldenrod;}
+#mail{display: none; border: 1px solid; width: 80%; height: fit-content; padding: 1.5rem; text-align: center; margin: auto; position: relative; background-color: rgba(25, 25, 112, 0.8);}
+::placeholder{color: rgba(255, 255, 255, 0.5);}
+#mail h6{font-family: 'Julius Sans One', sans-serif; font-size: 1.5rem; font-weight: lighter; color: white;}
+#mail p{color: khaki;}
 form{padding: 1rem;}
-.mail-details{font-size: 0.5rem; text-transform: capitalize; display: inline-block; width: 100%; padding: 0 0.3rem; line-height: 1rem; background-color: rgba(245, 245, 245, 0.2);}
-textarea{margin: 0.5rem auto;}
-.submit{color: palegoldenrod; background-color: transparent; border: 1px solid; padding: 0.5rem; cursor: pointer; width: 5rem; transition: all .5s;}
+.mail-details{font-size: 0.5rem; color: white; text-transform: capitalize; display: inline-block; width: 100%; padding: 0 0.3rem; line-height: 1rem; background-color: rgba(245, 245, 245, 0.2);}
+textarea{margin: 0.5rem auto; color: white;}
+.submit{color: khaki; background-color: transparent; border: 1px solid; padding: 0.5rem; cursor: pointer; width: 5rem; transition: all .5s;}
 .submit:hover{opacity: 0.7;}
 
 /*Back to Self*/
-#mail i{font-size: 2rem; opacity: 0.7;}
+#mail i{font-size: 2rem; opacity: 0.7; color: khaki;}
 #mail button{background-color: transparent; display: flex; transition: all .5s; cursor: pointer;}
 #mail button:hover{opacity: 1; transform: translateX(-0.5rem);}
 
 
 
 /*Certificates*/
+.course h5{font-family: 'Josefin Slab', serif; font-size: 4rem; font-weight: lighter; text-align: center; padding-top: 2rem;}
 .card {width: 60%; height: auto; position: relative; left: 0; right: 0; margin: 5rem auto;}
-.card .image {width: 100%; height: 100%; overflow: hidden;}
+.card .image {width: 90%; height: 100%; overflow: hidden; margin: auto;}
 .card .image img {width: 100%; transition: .8s; border: 1rem double goldenrod; background-color: darkgoldenrod;}
 .card:hover .image img {opacity: .5; transform: translateX(20%);}
 .card .details {position: absolute; top: 0; left: 0; width: 70%; height: 100%; background: palegoldenrod; transition: .8s; transform-origin: left; transform: perspective(2000px) rotateY(-90deg);}
@@ -85,31 +104,33 @@ textarea{margin: 0.5rem auto;}
 @media (min-width:481px) and (max-width:768px){
   .card .image img {border: 0.5rem double goldenrod;}
   .card {width: 100%;}
-  .card .details {width: 100%;}
+  .card .details {width: 90%;}
 }
 
 
 
 /*Jobs*/
-.course h5{font-family: 'Josefin Slab', serif; font-size: 3rem; font-weight: lighter; text-align: center; margin: auto;}
+.container {min-height: 100vh; width: 100%; display: flex; align-items: center; justify-content: center;}
+.timeline {width: 90%; height: auto; max-width: 40rem; margin: 0 auto; position: relative;}
+.timeline ul {list-style: none;}
+.timeline ul li {padding: 1rem; background-color: rgba(25, 25, 112, 0.8); border-radius: 10px; margin-bottom: 1rem;}
+.timeline ul li:last-child {margin-bottom: 0;}
+.timeline-content h1 {font-family: 'Julius Sans One', sans-serif; margin-bottom: 0.5rem; color: khaki;}
+.timeline-content p {font-family: 'Josefin Slab'; font-size: 0.7rem; font-weight: bold; letter-spacing: 0.05rem; line-height: 1rem; color: black; color: white;}
+.timeline-content h3{font-size: 0.5rem; color: white;}
 
-.about-certificates{width: 100%; display: inline-table;}
-.certificates{width: 100%; margin: 5rem auto; display: grid; grid-template-columns: repeat(2,1fr); }
-.img-certificate{height: auto; width: 80%; margin: auto; border: double 0.7rem; color: goldenrod; background-color: darkgoldenrod;}
-.certificates h3{font-family: 'Julius Sans One', sans-serif; font-size: smaller; text-align: center; border-radius: 1rem 1rem 0 0 ; background-color:rgba(25, 25, 112, 0.7); padding: 1rem;}
-.certificates h2{font-family: 'Josefin Slab'; font-size: smaller; font-weight: bold; color: darkgoldenrod; padding: 0.3rem 1rem;}
-.certificates p{font-family: 'Josefin Slab'; font-size: 0.6rem; font-weight: bold; color: black; padding: 0.3rem 1rem;}
-.about-course{overflow: auto;}
-.about-course img{width: auto; height: 1.5rem;}
+@media only screen and (min-width: 768px) {
+  .timeline:before {content: ""; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 2px; height: 100%; background-color: khaki;}
+  .timeline ul li {width: 50%; position: relative; margin-bottom: 50px;}
+  .timeline ul li:nth-child(odd) {float: left; clear: right; transform: translateX(-30px); border-radius: 20px 0px 20px 20px;}
+  .timeline ul li:nth-child(even) {float: right; clear: left; transform: translateX(30px); border-radius: 0px 20px 20px 20px;}
+  .timeline ul li::before {content: ""; position: absolute; height: 20px; width: 20px; border-radius: 50%; background-color: khaki; top: 0px;}
+  .timeline ul li:nth-child(odd)::before {transform: translate(50%, -50%); right: -30px;}
+  .timeline ul li:nth-child(even)::before {transform: translate(-50%, -50%); left: -30px;}
+  .timeline-content h3{position: absolute; top: -30px; color: darkslategray;}
+}
 
-.ballon{border-radius: 1rem; width: 80%; height: 100%; background-color: lavender; position: relative; top: 50%; transform: translateY(-50%);}
-.ballon:after{content: ""; width: 0;  height: 0; bottom: 1rem; position: absolute; border-top: 3rem solid transparent; border-bottom: 3rem solid transparent; z-index: -1; border-radius: 50%;}
 
-.description-certificates{margin-left: auto;}
-.description-certificates:after{left: -1.5rem; border-right: 3rem solid lavender;}
-
-.description-certificates2{margin-right: auto;}
-.description-certificates2:after{right: -1.5rem; border-left: 3rem solid lavender}
 
 
 
