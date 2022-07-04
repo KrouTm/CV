@@ -2,14 +2,17 @@ body{background-image: url(https://images.unsplash.com/photo-1558591710-4b4a1ae0
 *{text-decoration: none; list-style: none; box-sizing: border-box; margin: 0; padding: 0; border: none; font-size: xx-large; color: darkslategrey; font-family: 'Montserrat', sans-serif;}
 
 
-nav{display: flex; right: 2rem;background-color: rgba(240, 230, 140, 0.7); position: fixed; z-index: 1000; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%;}
+nav{display: flex; right: 2rem; background-color: rgba(240, 230, 140, 0.7); position: fixed; z-index: 1000; border-bottom-left-radius: 50%; border-bottom-right-radius: 50%; width: fit-content;}
 .back-name{width: 15rem; height: 100%; position: relative; padding: 0.5rem; text-align: center;}
 nav h6{font-family: 'Barlow Condensed', sans-serif; font-weight: lighter;}
 nav p{font-size: 0.5rem; padding: 1rem;}
-.navbar-show i{font-size: larger; padding: 0 1rem; margin: auto; transition: all .5s;}
+.navbar-show i{font-size: larger; padding: 0 1rem; margin: auto; transition: all .5s; width: max-content;}
 .navbar-show i:hover{opacity: 0.7;}
 .navbar-show{overflow: hidden; transition: all .8s ease-in-out; height: 0;}
 .back-name:hover .navbar-show{height: 5rem;}
+@media (max-width:768px){
+  nav{right: 0; left: 0; margin: auto; justify-content: center;}
+}
 
 /*Title*/
 .title{font-family: 'Josefin Slab', serif; font-size: 4rem; font-weight: lighter; text-align: left; line-height: 3rem;}
@@ -33,12 +36,13 @@ nav p{font-size: 0.5rem; padding: 1rem;}
 .about-me0{display: grid; grid-template-columns: repeat(2,1fr); width: 100%; justify-content: center;}
 .about-me0 p{font-size: 0.5rem;}
 #background-self{position: relative; height: 100%; width: 100%;}
-.back-self{background-image: url(self.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; width: 80%; height: 20rem; box-shadow: 0 0 5rem rgba(25, 25, 112, 0.3); position: relative; border: 1px solid khaki; margin: auto;}
-
+.back-self{background-image: url(self.jpg); background-position: center; background-size: cover; background-repeat: no-repeat; width: 23rem; height: 23rem; box-shadow: 0 0 5rem rgba(25, 25, 112, 0.3); position: relative; bottom: -1rem; border: 2px solid khaki; margin: auto; border-radius: 50%; z-index: -10; box-shadow: 1rem 1rem 1rem rgba(47, 79, 79, 0.5);}
 
 /*Email & Phone*/
-.contact{position: relative; display: flex; justify-content: right; height: 100%; align-items: flex-end; padding-bottom: 1rem; padding-right: 0.5rem;}
-.contact i{font-size: 2rem; letter-spacing: 1rem; text-align: center; transition: .5s; cursor: pointer; color: khaki; text-shadow: 0 0 0.5rem rgba(25, 25, 112, 0.2);}
+.contact{position: absolute; left: 15%; padding: 1rem 0.5rem; display: flex; width: fit-content; background-color: rgba(25, 25, 112, 0.6); border-radius: 0.5rem;}
+.contact:after{content: ""; width: 0; height: 0; position: absolute; border-right: 0.5rem solid transparent; border-left: 0.5rem solid transparent; border-top: 0.5rem solid; right: 20%; bottom: -0.5rem; color: rgba(25, 25, 112, 0.6);}
+
+.contact i{font-size: 1.5rem; padding: 0 0.5rem; text-align: center; transition: .5s; cursor: pointer; color: khaki; text-shadow: 0 0 0.5rem rgba(25, 25, 112, 0.2);}
 .contact i:hover{-webkit-animation: ring 1.2s infinite ease-in-out;}
 button{background-color: transparent;}
 
@@ -65,8 +69,8 @@ button{background-color: transparent;}
 /*Line*/
 hr{width: 60%; overflow: hidden; margin: auto; transform: rotate(90deg); position: relative; color: khaki; border-style: solid; border-width: 1px;}
 hr{display: block; left: -55%; bottom: 10rem;}
-
-
+.tecnologies{position: relative; margin-top: 1rem;}
+.tecnologies img{width: auto; height: 1.5rem;}
 
 
 /*Send E-mail*/
@@ -88,7 +92,13 @@ textarea{margin: 0.5rem auto; color: white;}
 
 
 /*Certificates*/
+.course{z-index: -100;}
 .course h5{font-family: 'Josefin Slab', serif; font-size: 4rem; font-weight: lighter; text-align: center; padding-top: 2rem;}
+.course p{text-align: center; margin: auto; font-size: 0.7rem; width: fit-content; padding: 0.5rem;}
+.quote{ background-color: khaki; position: relative; top: 1rem; max-width: 35rem; margin: auto;}
+.quote i{font-size: 1.5rem;}
+.la-quote-left{position: relative; left: -0.5rem; top: -0.5rem;}
+.la-quote-right{display: flex; justify-content: right; position: relative; right: -0.5rem; bottom: -0.5rem;}
 .card {width: 60%; height: auto; position: relative; left: 0; right: 0; margin: 5rem auto;}
 .card .image {width: 90%; height: 100%; overflow: hidden; margin: auto;}
 .card .image img {width: 100%; transition: .8s; border: 1rem double goldenrod; background-color: darkgoldenrod;}
